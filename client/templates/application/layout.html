@@ -1,0 +1,18 @@
+<template name="layout">
+    <div class="container">
+        {{>nav}}
+        <div style="height: 60px;"></div>
+        <div style="width: 100%;float: left">
+            <div style="float: left; width: 20%;height: 250px;background-color: #F8F8F8">
+                {{>silder}}
+            </div>
+            <div style="float: right; width: 79%;height: 500px;background-color: #F8F8F8;">
+                {{>yield}}
+            </div>
+        </div>
+        <div style="height: 50px; width: 100%;clear: both"></div>
+        <footer class="container navbar navbar-default navbar-fixed-bottom">
+            <div style="text-align: center"><h4>底部</h4></div>
+        </footer>
+    </div>
+</template>

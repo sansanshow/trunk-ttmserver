@@ -1,0 +1,28 @@
+<template name="nav">
+    <nav class="container navbar navbar-default navbar-fixed-top">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <h4><a href="/" style="text-decoration: none;margin-left: 10px;">Just Do IT</a></h4>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                {{#if flag.name_not_null}}
+                    <li><a href="/">你好{{name}}!</a></li>
+                    <li><a href="/login"><i class=""></i>&nbsp;登出</a></li>
+                    <li><a href="/register"><i class=""></i>&nbsp;注册</a></li>
+                {{/if}}
+                {{#if flag.name_is_null}}
+                    <li><a href="/login"><i class=""></i>&nbsp;登录</a></li>
+                    <li><a href="/register"><i class=""></i>&nbsp;注册</a></li>
+                {{/if}}
+                <li><a href="#"><i class=""></i>&nbsp;关于我们</a></li>
+            </ul>
+        </div>
+    </nav>
+</template>

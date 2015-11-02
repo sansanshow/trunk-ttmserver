@@ -1,0 +1,15 @@
+<template name="user">
+    <div style="height: 500px;padding: 10px;">
+        <div class="input-group col-xs-5">
+            <input id="name" type="text" class="form-control" placeholder="姓名">
+                        <span class="input-group-btn">
+                            <button type="submit" class="btn btn-info" id="adduser">添加</button>
+                        </span>
+        </div>
+        <div style="max-height: 100%;margin-top: 10px;padding-bottom:50px;overflow-y: scroll">
+            {{#each users}}
+                <span class="badge" style="margin-top: 10px;">{{name}}:{{pwd}}</span>
+            {{/each}}
+        </div>
+    </div>
+</template>

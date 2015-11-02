@@ -1,0 +1,40 @@
+<template name="chartForm">
+    <div style="height: 500px;padding: 10px;">
+        <div>
+            <div style="width: 100%;">
+                <div class="row" style="margin-left: 5px;">
+                    {{#if flag.name_is_admin}}
+                        <div class="col-xs-2">
+                            <select class="form-control">
+                                {{#each users}}
+                                    <option value="{{_id}}">{{name}}</option>
+                                {{/each}}
+                            </select>
+                        </div>
+                        <div class="col-xs-1">
+                            <button id="bt1" class="btn btn-info">禁言</button>
+                        </div>
+                        <div class="col-xs-1">
+                            <button id="bt2" class="btn btn-info">解禁</button>
+                        </div>
+                    {{/if}}
+                    <div class="input-group col-xs-5">
+                        <input id="content" type="text" class="form-control" placeholder="输入内容">
+                        <span class="input-group-btn">
+                            <button type="submit" class="btn btn-info" id="send">发送</button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="max-height: 100%;margin-top: 10px;padding-bottom:50px;">
+            {{#each charts}}
+                <div style="padding: 5px;">
+                    <span class="label label-danger">{{name}}：</span>
+                    <span class="label label-info">{{content}}</span>
+                    <span class="pull-right text-muted">{{time.getHours}}:{{time.getMinutes}}:{{time.getSeconds}}</span>
+                </div>
+            {{/each}}
+        </div>
+    </div>
+</template>

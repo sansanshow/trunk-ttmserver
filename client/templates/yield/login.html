@@ -1,0 +1,30 @@
+<template name="login">
+    <div class="container well" style="width: 60%;margin-top: 100px;">
+        <form class="form-horizontal">
+            <div class="row">
+                <div class="col-xs-2">
+                    <label class="pull-right">用户名</label>
+                </div>
+                <div class="col-xs-8">
+                    <input id="name" class="form-control" type="text"/>
+                </div>
+            </div>
+            <br>
+
+            <div class="row">
+                <div class="col-xs-2">
+                    <label class="pull-right">密码</label>
+                </div>
+                <div class="col-xs-8">
+                    <input id="pwd" class="form-control" type="password"/>
+                </div>
+            </div>
+            <br>
+
+            <div class="col-xs-offset-5">
+                <button id="login" class="btn btn-info">登录</button>
+                <a class="pull-right" href="/register">没有账号,请注册...</a>
+            </div>
+        </form>
+    </div>
+</template>

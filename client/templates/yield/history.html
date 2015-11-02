@@ -1,0 +1,13 @@
+<template name="history">
+    <div style="height: 500px;padding: 10px;">
+        <div style="max-height: 100%;margin-top: 10px;padding-bottom:50px;overflow-y: scroll">
+            {{#each allcharts}}
+                <div style="padding: 5px;">
+                    <span class="label label-danger">{{name}}：</span>
+                    <span class="label label-info">{{content}}</span>
+                    <span class="pull-right text-muted">{{time.getHours}}:{{time.getMinutes}}:{{time.getSeconds}}</span>
+                </div>
+            {{/each}}
+        </div>
+    </div>
+</template>

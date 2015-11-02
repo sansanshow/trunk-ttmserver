@@ -1,0 +1,13 @@
+<template name="silder">
+    <div>
+        <div style="padding-left: 50px;padding-top: 20px;"><span><a href="/"
+                                                                    style="text-decoration: none">聊天室</a></span></div>
+        <hr>
+        <div style="padding-left: 50px;"><span><a href="/history" style="text-decoration: none">聊天记录</a></span></div>
+        <hr>
+        {{#if nameIs}}
+            <div style="padding-left: 50px;"><span><a href="/user" style="text-decoration: none">编辑用户</a></span></div>
+            <hr>
+        {{/if}}
+    </div>
+</template>
